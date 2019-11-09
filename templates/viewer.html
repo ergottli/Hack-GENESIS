@@ -6,7 +6,30 @@
 		<script language="javascript" type="text/javascript" src="../static/libraries/p5.js"></script>
 		<script language="javascript" type="text/javascript" src="../static/libraries/aframe.min.js"></script>
 		<script language="javascript" type="text/javascript" src="../static/libraries/aframep5.js"></script>
-		<script language="javascript" type="text/javascript" src="../static/sketch.js"></script>
+		<script language="javascript" type="text/javascript">
+            var world;
+
+var loader;
+
+function setup() {
+
+	noCanvas();
+
+	world = new World('VRScene');
+
+	var threeSceneReference = document.querySelector('a-scene').object3D;
+
+	loader = new THREE.MOLLoader();
+	loader.load("../static/molecules/{% if molname %}{{ molname }}{% else %}molecule.mol{% endif %}", (model) => {
+		threeSceneReference.add(model);
+	});
+}
+
+function draw() {
+
+}
+
+        </script>
 		<script language="javascript" type="text/javascript" src="../static/MOLLoader.js"></script>
 		<style>
 			body {

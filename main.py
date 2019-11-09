@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 import os
 from werkzeug.utils import secure_filename
 from flask import send_file
@@ -51,13 +51,14 @@ def upload_image():
                 filename = secure_filename(image.filename)
                 image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
                 pathfile = os.path.join(app.config["IMAGE_UPLOADS"], filename)
-                molfile = os.path.join(app.config["MOLECULES"], "molecule.mol")
+                molfile = os.path.join(app.config["MOLECULES"], os.path.splitext(filename)[0] + ".mol")
+                molname = os.path.splitext(filename)[0] + ".mol"
                 print("Изображение сохранено")
                 subprocess.run(["./imago_console", pathfile, "-o", molfile], check=True)
                 subprocess.run(["chmod", "+x", molfile], check=True)
                 # TODO Удаление загруженного файла
-                os.remove(pathfile)
-                return render_template("viewer.html")
+                # os.remove(pathfile)
+                return render_template("viewer.html", molname=molname)
             else:
                 print("Неверное расширение")
                 return render_template("upload_error.html")
