@@ -1,1 +1,0 @@
-Brc1cc(CN(C2(c3ccccc3)C(=C)N2C2CCCCCC2)C(=O)c2cc3c(cco3)[nH]2)ccc1	

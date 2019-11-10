@@ -111,7 +111,7 @@ def isopropanol():
     return render_template("isopropanol.html")
 
 
-@app.route("/oxytocine")
+@app.route("/oxytocin")
 def oxytocine():
     return render_template("oxytocin.html")
 
@@ -124,8 +124,6 @@ def cyanogen():
 @app.route("/isoliquiritigenin")
 def Isoliquiritigenin():
     return render_template("isoliquiritigenin.html")
-
-
 
 
 if __name__ == "__main__":

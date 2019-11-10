@@ -1,0 +1,1 @@
+CC(C/N=C/1\CC=CC=C1C#N)N	
