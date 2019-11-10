@@ -1,0 +1,1 @@
+ClC1=C(c2ccc(C)cc2)[H]c2c(C(c3ccccc3)/C/1=C/C[H]1CCCCC1)cccc2	

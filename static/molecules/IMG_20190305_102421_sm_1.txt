@@ -1,0 +1,1 @@
+CC1(c2ccccc2)CN1C1CCCCCC1.Cc1cc(ccc1)CC.CC(=C)/C(=C/C1=CC=CC1)/NC	
