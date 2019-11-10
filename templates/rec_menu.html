@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>InTeam - MOLVR</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+					<header id="header">
+						<div class="logo">
+							<span class="icon solid fa-atom"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>molvr</h1>
+								<p>Сфотографируй структуру прямо из своего учебника и пренеси ее в виртуальное пространство <i class="icon solid fa-vr-cardboard"></i></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro"><i class="icon solid fa-info-circle"></i> Инфо</a></li>
+								<li><a href="#work"><i class="icon solid solid fa-atom"></i> Начать</a></li>
+								<li><a href="#about"><i class="icon solid fa-eye"></i> Галерея</a></li>
+								<li><a href="#contact"><i class="icon solid fa-users-cog"></i> О нас</a></li>
+							</ul>
+						</nav>
+					</header>
+
+					<div id="main">
+							<article id="intro">
+								<h2 class="major">Как я работаю?</h2>
+								<span class="image main"><img src="../static/images/pic01.jpg" alt="" /></span>
+								<p>Скучно смотреть на плоские картинки в учебнике?</p>
+								<p>Просто перейди в раздел <a href="#work"><i class="icon solid solid fa-atom"></i> Начать</a> сфотографируй нужную молекулу - и взгляни на ее структуру в 3D и VR с помощью нашего приложения.</p>
+								<p>Либо посмотри множество примеров самых поплярных молекул в нашей <a href="#about"><i class="icon solid fa-eye"></i> Галерее</a>.</p>
+							</article>
+
+							<article id="work">
+								<h2 class="major">Анализ</h2>
+								<span class="image main"><img src="../static/images/pic02.jpg" alt="" /></span>
+								<!-- Button -->
+            					<form action="/upload-image" method="POST" enctype="multipart/form-data">
+        							<div class="field">
+  	 							      	<input type="file" class="custom-file-input button" name="image" id="image">
+  	 							  	</div>
+  	 							  	<br>
+  	 							  <button type="submit" class="button"><i class="icon solid solid fa-atom"></i> Обработать</button>
+  	 							</form>
+                                {% if pngname_1 %}
+                                <span class="image main"><img src="../static/molecules/{{ pngname_1 }}" alt="" /></span>
+                                {% endif %}
+                                {% if smilesname_1 %}
+                                <h4>SMILE</h4>
+                                {{ smilename_1 }}
+                                {% endif %}
+                                <a href="/viewer" class="button small">Просмотр VR</a>
+                                <a href="/download_file" class="button small">Скачать mol-файл</a>
+								<p>Сделайте фото или выберите уже готовое изображение формата jpg или png.</p>
+								<p>Затем жми "Обработать", чуточку подожди и любуйся на готовое изображение прямиком из твоей книги</p>
+							</article>
+
+							<article id="about">
+								<h2 class="major">Галерея молекул</h2>
+
+								<h4><a href="/water">Вода (H2O)</a></h4>
+								<span class="image main"><a href="/water"><img src="../static/images/pic03.jpg" alt="" /></a></span>
+								<p>Бинарное неорганическое соединение с химической формулой H2O: молекула воды состоит из двух атомов водорода и одного — кислорода, которые соединены между собой ковалентной связью. При нормальных условиях представляет собой прозрачную жидкость, не имеющую цвета (при малой толщине слоя), запаха и вкуса. В твёрдом состоянии называется льдом (кристаллы льда могут образовывать снег или иней), а в газообразном — водяным паром. Вода также может существовать в виде жидких кристаллов (на гидрофильных поверхностях)</p>
+								<h4><a href="/isopropanol">Изопропанол</a></h4>
+								<span class="image main"><a href="/isopropanol"><img src="../static/images/pic03.jpg" alt="" /></a></span>
+								<p>Изопропи́ловый спирт (пропано́л-2, втор-пропанол, изопропано́л, диметилкарбино́л, сокр. ИПС — широко используемое сокращение) — органическое соединение, простейший вторичный одноатомный спирт алифатического ряда. Существует 1 изомер изопропанола — пропанол-1, обладающий прямой цепью.<br />
+								При нормальных условиях прозрачная, бесцветная жидкость с резким характерным запахом и мягким горьким вкусом, типичным для спиртов с короткой углеводородной цепью.<br />Как и все летучие спирты, огнеопасен. Токсичен (считается, что в 6 раз более этанола), требует осторожного обращения.</p>
+								<h4><a href="#">Окситоцин</a></h4>
+								<span class="image main"><a href="/water"><img src="../static/images/pic03.jpg" alt="" /></a></span>
+								<p>Нейропептид и пептидный гормон паравентрикулярного ядра гипоталамуса, который транспортируется в заднюю долю гипофиза, где накапливается (депонируется) и выделяется в кровь. Имеет олигопептидное строение.</p>
+								<h4><a href="#">Изоликвиритигенин</a></h4>
+								<span class="image main"><a href="/water"><img src="../static/images/pic03.jpg" alt="" /></a></span>
+								<p>Соединение класса флавоноидов с незамкнутым пирановым кольцом, с насыщенной α-β-связью в пропановом фрагменте называются дигидрохалконами. Производные 1,2-дифенилпропана с незамкнутым пирановым кольцом носят название изохалканоиды, 1,1-дифенилпропана — неохалканоиды. Могут образовывать природные димеры — бихалканоиды. .....По наличию гидроксильных групп в кольце В могут быть незамещёнными (2',4'-дигидроксихалкон), моно-, дважды и трижды замещёнными.</p>
+								<h4><a href="#">Цианоген</a></h4>
+								<span class="image main"><a href="/water"><img src="../static/images/pic03.jpg" alt="" /></a></span>
+								<p>Неорганический состав с формулой NCCl. Это линейное, трехатомное псевдогалогенное соединение является легко сжатым бесцветным газом. Обычно сталкивается в лабораторных условиях с бромидом и широко используется в биохимическом анализе.</p>
+							</article>
+
+							<article id="contact">
+								<h2 class="major">О нас</h2>
+								<span class="image main"><img src="../static/images/pic01.jpg" alt="" /></span>
+								<h3>InTeam</h3>
+								<h4>Майоров Юрий (tg: @Jim_Root)</h4>
+								<p>FullStack разработка - BackEnd(Python - Flask, Django), FrontEnd (React, JQuery, Bootstrap) <br />
+								ML - Sklearn, XGBoost, Catboost <br />
+								DL и CV - PyTorch, Keras, OpenCV, OpenVINO</p>
+								<h4>Дальше</h4>
+							</article>
+					</div>
+
+					<footer id="footer">
+						<p class="copyright">&copy; InTeam. Для Phystech.Hack</p>
+					</footer>
+
+			</div>
+
+			<div id="bg"></div>
+
+			<script src="../static/assets/js/jquery.min.js"></script>
+			<script src="../static/assets/js/browser.min.js"></script>
+			<script src="../static/assets/js/breakpoints.min.js"></script>
+			<script src="../static/assets/js/util.js"></script>
+			<script src="../static/assets/js/main.js"></script>
+
+	</body>
+</html>

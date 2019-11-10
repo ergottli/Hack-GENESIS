@@ -49,7 +49,14 @@
   	 							  	<br>
   	 							  <button type="submit" class="button"><i class="icon solid solid fa-atom"></i> Обработать</button>
   	 							</form>
-                                <a href="/viewer" class="button small">Просмотр текущей</a>
+                                {% if pngname_1 %}
+                                <span class="image main"><img src="../static/molecules/{{ pngname_1 }}" alt="" /></span>
+                                {% endif %}
+                                {% if smilesname_1 %}
+                                <h4>SMILE</h4>
+                                {{ smilename_1 }}
+                                {% endif %}
+                                <a href="/viewer" class="button small">Просмотр VR</a>
                                 <a href="/download_file" class="button small">Скачать mol-файл</a>
 								<p>Сделайте фото или выберите уже готовое изображение формата jpg или png.</p>
 								<p>Затем жми "Обработать", чуточку подожди и любуйся на готовое изображение прямиком из твоей книги</p>
