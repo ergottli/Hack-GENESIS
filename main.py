@@ -25,9 +25,10 @@ def allowed_image(filename):
         return False
 
 
-@app.route('/download_file', methods=['GET', 'POST'])
-def download():
-    downloads = os.path.join(app.root_path, app.config['MOLECULES'], "molecule.mol")
+@app.route('/download_file/<string:molname>', methods=['GET', 'POST'])
+def download(molname):
+    print(" in download: " + molname)
+    downloads = os.path.join(app.root_path, app.config['MOLECULES'], molname)
     if os.path.exists(downloads):
         norm_downloads = os.path.normpath(downloads)
         res = send_file(norm_downloads, as_attachment=True)
@@ -47,7 +48,6 @@ def receive_recog_files(pathfile, filename):
     pngfile = os.path.join(app.config["MOLECULES"], pngname)
     # path's for smiles files
     smiles_file = os.path.join(app.config["MOLECULES"], smilesname)
-    smiles_file_2 = os.path.join(app.config["MOLECULES"], os.path.splitext(filename)[0] + "_sm_2.txt")
     # recognize with imago, create mol and smiles files
     subprocess.run(["./imago_console", pathfile, "-o", molfile], check=True)
     subprocess.run(["chmod", "+x", molfile], check=True)
@@ -55,12 +55,17 @@ def receive_recog_files(pathfile, filename):
          "-osmiles", "-O", smiles_file], check=True)
     subprocess.run([os.path.join(os.path.dirname(os.path.realpath(__file__)), "open-babel", "bin", "obabel"), molfile,
         "-O", pngfile], check=True)
-    return molname, pngname, smiles_file
+    return molname, pngname, smilesname, smiles_file
 
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
     return render_template("index.html")
+
+
+@app.route("/result", methods=['GET', 'POST'])
+def result():
+    return render_template("result.html")
 
 
 @app.route("/upload-image", methods=["GET", "POST"])
@@ -75,19 +80,15 @@ def upload_image():
                 filename = secure_filename(image.filename)
                 image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
                 pathfile = os.path.join(app.config["IMAGE_UPLOADS"], filename)
-                molname, pngname, smilesname = receive_recog_files(pathfile, filename)
+                molname, pngname, smilesname, smilesfile = receive_recog_files(pathfile, filename)
                 print("Изображение сохранено")
-                # return rec_menu(molname_1, pngname_1, smilesname_1)
-                return render_template("viewer.html", molname=molname)
+                text = open(smilesfile, "r").read()
+                return render_template("result.html", molname=molname, pngname=pngname, smilesname=text)
+                # return render_template("viewer.html", molname=molname)
             else:
                 print("Неверное расширение")
                 return render_template("upload_error.html")
     return render_template("index.html")
-
-
-@app.route("/rec_menu")
-def rec_menu(molname, pngname, smilesname):
-    return send_file(os.path.join(app.config["MOLECULES"], pngname))
 
 
 @app.route("/about")
@@ -95,9 +96,9 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/viewer")
-def viewer():
-    return render_template("viewer.html")
+@app.route("/viewer/<string:molname>", methods=['GET', 'POST'])
+def viewer(molname):
+    return render_template("viewer.html", molname=molname)
 
 
 @app.route("/water")
@@ -108,6 +109,23 @@ def water():
 @app.route("/isopropanol")
 def isopropanol():
     return render_template("isopropanol.html")
+
+
+@app.route("/oxytocine")
+def oxytocine():
+    return render_template("oxytocin.html")
+
+
+@app.route("/cyanogen")
+def cyanogen():
+    return render_template("cyanogen.html")
+
+
+@app.route("/isoliquiritigenin")
+def Isoliquiritigenin():
+    return render_template("isoliquiritigenin.html")
+
+
 
 
 if __name__ == "__main__":

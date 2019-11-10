@@ -1,4 +1,0 @@
-commands for imagemagic
-export MAGICK_HOME="$HOME/ImageMagick-7.0.9"
-export PATH="$MAGICKHOME/bin:$PATH"
-export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
