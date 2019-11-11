@@ -1,6 +1,6 @@
 # MOL.VR
 
-One Paragraph of project description goes here
+Quick search for information about a substance and in databases using the camera of your phone or tablet.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+This is a cross-platform application and it is based on our servers.
 ```
 
 ### Installing
