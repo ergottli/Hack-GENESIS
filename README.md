@@ -4,7 +4,8 @@ MOL.VR(Beta) - is an open source tool designed to search for information about a
  
 ### INTRODUCE
 
-
+Experience in the construction of molecular graphs shows that the most accurate are the questions of accurately determining the coordinates of a vertex molecule.
+at the moment, work is underway on the accuracy of determining SMILES, and the accuracy of rendering, determining vertices and nodes.
 
 ```
 var smiles=get('smiles').split(/[\r\n\t ;,]+/).filter(s => s);
