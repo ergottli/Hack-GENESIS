@@ -1,4 +1,4 @@
-# Project Title
+# MOL.VR
 
 One Paragraph of project description goes here
 
