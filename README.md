@@ -37,6 +37,12 @@ API.createData('results', results);
 ```
 An example is shown above, but it works, this is not the end result of the product.
 
+## The results that we got
+
+![1 001](https://user-images.githubusercontent.com/49564849/68629747-fa3cab00-04f5-11ea-8b5b-fa7274ff9fad.png)
+![2 001](https://user-images.githubusercontent.com/49564849/68629796-2ce6a380-04f6-11ea-9e68-e71f50d78b8b.png)
+![3 001](https://user-images.githubusercontent.com/49564849/68629809-3e2fb000-04f6-11ea-8a35-dcf8b01a3311.png)
+
 ## Built With
 
 * [Python](https://www.python.org/)
