@@ -1,10 +1,8 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request
 import os
 from werkzeug.utils import secure_filename
 from flask import send_file
 import subprocess
-from PIL import Image
-import shutil
 
 app = Flask(__name__)
 

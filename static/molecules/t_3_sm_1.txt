@@ -1,1 +1,0 @@
-NC1=C(c2c(c3ccccc3)c(c3ccccc3)*c2C)*(=C1CSC1=[K]c2c(cccc2)O1)/C=C/CCC	
