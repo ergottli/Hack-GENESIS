@@ -2,19 +2,17 @@
 
 MOL.VR(Beta) - is an open source tool designed to search for information about a substance in the database using the camera of your phone or tablet.
  
-### INTRODUCE
+## INTRODUCE
 
-Experience in the construction of molecular graphs shows that the most accurate are the questions of accurately determining the coordinates of a vertex molecule.
+Experience in the construction of molecular graphs shows that the most accurate are the questions of accurately determining the coordinates of a vertex molecule. Each individual approach does not always show the best result, the solution is often incomplete and / or inaccurate. The existing solutions are separate disparate algorithms and toolkits for recognizing 2D images of a chemical.
 At the moment, work is underway on the accuracy of determining SMILES, and the accuracy of rendering, determining vertices and nodes.
-There are several possible solutions you can use:
+There are several possible solutions we can use:
 1) Machine learning.
-2) Pre-processing of photos and pictures for a more accurate result (our option).
+2) Pre-processing of photos and pictures for a more accurate result (our option). An important role is played by the quality of the processed image.
 3) Finalize the solution with the addition of the library and try to process the existing database with it.
-Each individual approach does not always show the best result, the solution is often incomplete and / or inaccurate. An important role is played by the quality of the processed image.
-The existing solutions are separate disparate algorithms and toolkits for recognizing 2D images of a chemical.
 
 ```
-EXAMPLE
+EXAMPLE(SMILES)
 
 var smiles=get('smiles').split(/[\r\n\t ;,]+/).filter(s => s);
 
