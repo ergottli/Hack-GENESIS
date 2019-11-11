@@ -1,8 +1,9 @@
 # ![freeLogo](https://user-images.githubusercontent.com/49564849/68621524-05391080-04e1-11ea-907f-c0314c61416f.jpeg)
 
+MOL.VR - это инструмент с открытым исходным кодом созданый для поиска информации о веществе в БД с помощью камеры вашего телефона или планшета.
 Quick search information about a substance and in databases using the camera of your phone or tablet.
 
-## Getting Started
+## 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -66,16 +67,10 @@ Add additional notes about how to deploy this on a live system
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
-* **Dobroklonskaya M.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Chaplygin A.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Mayorov U.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Korotkov S.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Koryakovsky D.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Dobroklonskaya M.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
+* **Chaplygin A.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
+* **Mayorov U.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
+* **Korotkov S.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
+* **Koryakovsky D.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
