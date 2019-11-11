@@ -1,8 +1,6 @@
 # ![freeLogo](https://user-images.githubusercontent.com/49564849/68621524-05391080-04e1-11ea-907f-c0314c61416f.jpeg)
 
-MOL.VR - это инструмент с открытым исходным кодом созданый для поиска информации о веществе в БД с помощью камеры вашего телефона или планшета.
-Quick search information about a substance and in databases using the camera of your phone or tablet.
-
+MOL.VR - is an open source tool designed to search for information about a substance in the database using the camera of your phone or tablet.
 ## 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -13,7 +11,9 @@ What things you need to install the software and how to install them
 
 ```
 This is a cross-platform application and it is based on our servers.
+
 ```
+
 
 ### Installing
 
@@ -53,24 +53,18 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Python](http://https://www.python.org/)
+* [JavaScript](https://https://www.javascript.com/)
+* [FLASK](https://https://www.palletsprojects.com/p/flask/)
+* [Imago](https://https://lifescience.opensource.epam.com/imago/imago_console.html)
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
-* **Dobroklonskaya M.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
-* **Chaplygin A.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
-* **Mayorov U.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
-* **Korotkov S.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
-* **Koryakovsky D.** - ** - [PurpleBooth](https://github.com/PurpleBooth)
+* **Dobroklonskaya M.** - ** - [](https://github.com/PurpleBooth)
+* **Chaplygin A.** - ** - [](https://github.com/PurpleBooth)
+* **Mayorov U.** - ** - [](https://github.com/PurpleBooth)
+* **Korotkov S.** - ** - [therealadespina](https://github.com/therealadespina)
+* **Koryakovsky D.** - ** - [](https://github.com/PurpleBooth)
