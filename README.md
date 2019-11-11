@@ -1,16 +1,32 @@
 # ![freeLogo](https://user-images.githubusercontent.com/49564849/68621524-05391080-04e1-11ea-907f-c0314c61416f.jpeg)
 
-MOL.VR - is an open source tool designed to search for information about a substance in the database using the camera of your phone or tablet.
-## 
+MOL.VR(Beta) - is an open source tool designed to search for information about a substance in the database using the camera of your phone or tablet.
+ 
+### INTRODUCE
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
 
 ```
-This is a cross-platform application and it is based on our servers.
+var smiles=get('smiles').split(/[\r\n\t ;,]+/).filter(s => s);
+
+var results=smiles.map( smile => {
+    var molecule=OCL.Molecule.fromSmiles(smile);
+    var mf=molecule.getMolecularFormula();
+    var properties=new OCL.MoleculeProperties(molecule);
+    
+    return {
+        smiles: smile,
+        mw:mf.relativeWeight,
+        em:mf.absoluteWeight,
+        mf:mf.formula,
+        logP: properties.logP,
+        logS: properties.logS,
+        psa: properties.polarSurfaceArea
+    }
+    
+})
+
+API.createData('results', results);
 
 ```
 
@@ -55,10 +71,10 @@ Give an example
 
 ## Built With
 
-* [Python](http://https://www.python.org/)
-* [JavaScript](https://https://www.javascript.com/)
-* [FLASK](https://https://www.palletsprojects.com/p/flask/)
-* [Imago](https://https://lifescience.opensource.epam.com/imago/imago_console.html)
+* [Python](https://www.python.org/)
+* [JavaScript](https://www.javascript.com/)
+* [FLASK](https://www.palletsprojects.com/p/flask/)
+* [Imago](https://lifescience.opensource.epam.com/imago/imago_console.html)
 
 
 ## Authors
