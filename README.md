@@ -35,6 +35,7 @@ var results=smiles.map( smile => {
 
 API.createData('results', results);
 ```
+An example is shown above, but it works, this is not the end result of the product.
 
 ## Built With
 
@@ -46,8 +47,8 @@ API.createData('results', results);
 
 ## Authors
 
-* **Dobroklonskaya M.** - ** - [](https://github.com/PurpleBooth)
-* **Chaplygin A.** - ** - [](https://github.com/PurpleBooth)
-* **Mayorov U.** - ** - [](https://github.com/PurpleBooth)
+* **Dobroklonskaya M.**  - [marina](https://github.com/marina1177)
+* **Chaplygin A.** - ** - [ergottli](https://github.com/ergottli)
+* **Mayorov U.** - ** - [noreederek](https://github.com/noreederek)
 * **Korotkov S.** - ** - [therealadespina](https://github.com/therealadespina)
-* **Koryakovsky D.** - ** - [](https://github.com/PurpleBooth)
+* **Koryakovsky D.**
