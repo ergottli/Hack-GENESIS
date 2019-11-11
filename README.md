@@ -1,4 +1,4 @@
-# MOL.VR ![freeLogo](https://user-images.githubusercontent.com/49564849/68621524-05391080-04e1-11ea-907f-c0314c61416f.jpeg)
+# ![freeLogo](https://user-images.githubusercontent.com/49564849/68621524-05391080-04e1-11ea-907f-c0314c61416f.jpeg)
 
 Quick search for information about a substance and in databases using the camera of your phone or tablet.
 
