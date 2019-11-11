@@ -1,6 +1,6 @@
 # ![freeLogo](https://user-images.githubusercontent.com/49564849/68621524-05391080-04e1-11ea-907f-c0314c61416f.jpeg)
 
-Quick search for information about a substance and in databases using the camera of your phone or tablet.
+Quick search information about a substance and in databases using the camera of your phone or tablet.
 
 ## Getting Started
 
@@ -72,19 +72,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Dobroklonskaya M.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Chaplygin A.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Mayorov U.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Korotkov S.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Koryakovsky D.** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
