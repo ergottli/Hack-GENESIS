@@ -48,7 +48,7 @@ An example is shown above, but it works, this is not the end result of the produ
 ## Authors
 
 * **Dobroklonskaya M.**  - [marina](https://github.com/marina1177)
-* **Chaplygin A.** - ** - [ergottli](https://github.com/ergottli)
-* **Mayorov U.** - ** - [noreederek](https://github.com/noreederek)
-* **Korotkov S.** - ** - [therealadespina](https://github.com/therealadespina)
+* **Chaplygin A.** - [ergottli](https://github.com/ergottli)
+* **Mayorov U.** - [noreederek](https://github.com/noreederek)
+* **Korotkov S.** - [therealadespina](https://github.com/therealadespina)
 * **Koryakovsky D.**
