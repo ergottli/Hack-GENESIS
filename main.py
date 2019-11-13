@@ -3,6 +3,7 @@ import os
 from werkzeug.utils import secure_filename
 from flask import send_file
 import subprocess
+from preprocess import change_rectangles
 
 app = Flask(__name__)
 
@@ -30,8 +31,6 @@ def download(molname):
     if os.path.exists(downloads):
         norm_downloads = os.path.normpath(downloads)
         res = send_file(norm_downloads, as_attachment=True)
-        # TODO удаление mol-файла после выдачи
-        # os.remove(norm_downloads)
     else:
         res = "There is no file\n"
     return res
@@ -49,9 +48,9 @@ def receive_recog_files(pathfile, filename):
     # recognize with imago, create mol and smiles files
     subprocess.run(["./imago_console", pathfile, "-o", molfile], check=True)
     subprocess.run(["chmod", "+x", molfile], check=True)
-    subprocess.run([os.path.join(os.path.dirname(os.path.realpath(__file__)), "open-babel", "bin", "obabel"), "-imol", molfile,
+    subprocess.run(["obabel", "-imol", molfile,
          "-osmiles", "-O", smiles_file], check=True)
-    subprocess.run([os.path.join(os.path.dirname(os.path.realpath(__file__)), "open-babel", "bin", "obabel"), molfile,
+    subprocess.run(["obabel", molfile,
         "-O", pngfile], check=True)
     return molname, pngname, smilesname, smiles_file
 
@@ -77,12 +76,12 @@ def upload_image():
             if allowed_image(image.filename):
                 filename = secure_filename(image.filename)
                 image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
+                pathfile = change_rectangles(pathfile)
                 pathfile = os.path.join(app.config["IMAGE_UPLOADS"], filename)
                 molname, pngname, smilesname, smilesfile = receive_recog_files(pathfile, filename)
                 print("Изображение сохранено")
                 text = open(smilesfile, "r").read()
                 return render_template("result.html", molname=molname, pngname=pngname, smilesname=text)
-                # return render_template("viewer.html", molname=molname)
             else:
                 print("Неверное расширение")
                 return render_template("upload_error.html")
@@ -125,4 +124,4 @@ def Isoliquiritigenin():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

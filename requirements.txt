@@ -1,2 +1,6 @@
 Flask
 Werkzeug
+scikit-image
+numpy
+opencv-python
+Imutils
