@@ -46,7 +46,7 @@ def receive_recog_files(pathfile, filename):
     # path's for smiles files
     smiles_file = os.path.join(app.config["MOLECULES"], smilesname)
     # recognize with imago, create mol and smiles files
-    subprocess.run(["./imago_console", pathfile, "-o", molfile], check=True)
+    subprocess.run(["./i_c", pathfile, "-o", molfile], check=True)
     subprocess.run(["chmod", "+x", molfile], check=True)
     subprocess.run(["obabel", "-imol", molfile,
          "-osmiles", "-O", smiles_file], check=True)
@@ -76,8 +76,8 @@ def upload_image():
             if allowed_image(image.filename):
                 filename = secure_filename(image.filename)
                 image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
-                pathfile = change_rectangles(pathfile)
                 pathfile = os.path.join(app.config["IMAGE_UPLOADS"], filename)
+                pathfile = change_rectangles(pathfile)
                 molname, pngname, smilesname, smilesfile = receive_recog_files(pathfile, filename)
                 print("Изображение сохранено")
                 text = open(smilesfile, "r").read()
