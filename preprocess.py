@@ -59,9 +59,9 @@ def change_rectangles(image_path):
     try:
         screenCnt
     except NameError:
-        screenCnt = None
+        screenCnt = []
 
-    if screenCnt != None:
+    if screenCnt != []:
         warped = new_contour(orig, screenCnt.reshape(4, 2) * ratio)
     else:
         warped = image
